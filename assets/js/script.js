@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
         if (!searchValue) {
             return;
         }
-        let endpoint = `http://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`;
+        let endpoint = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&appid=d91f911bcf2c0f925fb6535547a5ddc9&units=imperial`;
         fetch(endpoint)
             .then((res) => res.json())
             .then((data) => {
@@ -55,7 +55,7 @@ window.addEventListener("load", function () {
                         ).toLocaleDateString();
 
                         let imageElement = document.createElement("img");
-                        imageElement.setAttribute("src", `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`);
+                        imageElement.setAttribute("src", `https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`);
 
                         let paragraph1 = document.createElement("p");
                         paragraph1.classList.add("card-text");
@@ -82,7 +82,7 @@ window.addEventListener("load", function () {
     // Helper funcion to fetch and display the UV Index
     function uvIndex(lat, lon) {
         fetch(
-            `http://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`
+            `https://api.openweathermap.org/data/2.5/uvi?appid=d91f911bcf2c0f925fb6535547a5ddc9&lat=${lat}&lon=${lon}`
             )
 
             .then((result) => result.json())
@@ -124,7 +124,7 @@ window.addEventListener("load", function () {
 
     // Function that preforms the actual API request and creates elements to render to the page
     function searchWeather(searchValue){
-        let endpoint= `http://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=1cea51fd6d072959d8e4ce55c4aa0d3f&unit=imperial`;
+        let endpoint= `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&appid=1cea51fd6d072959d8e4ce55c4aa0d3f&unit=imperial`;
         fetch(endpoint)
         .then((result)=> result.json())
         .then((data)=> {
@@ -162,7 +162,7 @@ window.addEventListener("load", function () {
                cardBodyElement.classList.add('card-body');
 
           let imageElement = document.createElement('img');
-          imageElement.setAttribute("src", `http://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+          imageElement.setAttribute("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
             
           // Apend all the content that we created 
           titleElement.appendChild(imageElement);
