@@ -6,6 +6,9 @@ This whole reason for this site is to allow the user to have up-to-date informat
 ### Link to deployed site 
 https://cl2731.github.io/Weather_Outlook/
 
+### License 
+#### -MIT
+
 ### Site in action
 ![image](https://user-images.githubusercontent.com/100871996/162870701-795e9c42-c272-43d5-a554-5db7890ee80e.png)
 
